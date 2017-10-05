@@ -232,7 +232,7 @@ body {
 
 #contact {
      color: #fff;
-    background-color: #213b50;
+    background-color: $dark-blue-background-color;
     padding: 5% 5% 5% 5%;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -246,7 +246,7 @@ body {
 
 #contact-info span {
     font-size: 38px;
-    color: #1ac056;
+    color: $font-green-color
     font-weight: 500px;
 }
 
@@ -270,7 +270,7 @@ body {
 
 #contact-info .contact-social-icons a:hover {
     color: #213b50;
-    border: 1px solid #213b50;
+    border: 1px solid $dark-blue-background-color;
     background-color: #fff;
 }
 
@@ -333,7 +333,7 @@ footer>p.copyright {
 nav#main-nav>.toggle {
     background-color: #fff;
     padding: 0 20px;
-    color: #1ac056;
+    color:$font-green-color
     font-size: 20px;
     line-height: 60px;
     text-decoration: none;
