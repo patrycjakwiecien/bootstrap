@@ -1,7 +1,24 @@
-@import "zmienne";
+@import "zmienna";
+@mixin naglowek {
+    font-size: 30px;
+    color: #291f1a;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+@mixin opis {
+    font-size: 18px;
+    color: $font-dark-color;
+    font-family: $font-family-lato;
+    font-weight: 300;
+}
+
 body {
     background-color: $white-background-color;
 }
+
+
+/*menu*/
 
 #main-nav {
     background-color: $transparent-background-color;
@@ -40,6 +57,9 @@ li {
         background-color: $transparent-background-color;
     }
 }
+
+
+/*header*/
 
 .header-content-foto {
     img {
@@ -83,6 +103,9 @@ li {
     }
 }
 
+
+/*o mnie*/
+
 #about-me {
     background-color: #f9fcfe;
     padding-top: 2%;
@@ -90,13 +113,9 @@ li {
 
 #o-mnie {
     h2 {
-        font-size: 30px;
-        color: $font-dark-color;
+        @include: naglowek;
         margin-left: 8%;
         margin-bottom: 5%;
-        font-family: $font-family-lato;
-        font-weight: 300;
-        font-size: 30px;
     }
 }
 
@@ -114,11 +133,12 @@ li {
         margin-left: 5%;
         margin-right: 15%;
         margin-bottom: 10%;
-        font-family: $font-family-lato;
-        font-size: 18px;
-        font-weight: 300;
+        @include: opis;
     }
 }
+
+
+/*umiejetnosci*/
 
 #my-skills {
     text-align: center;
@@ -128,22 +148,16 @@ li {
 
 #moje-umiejetnosci {
     h2 {
-        font-size: 30px;
-        color: $font-dark-color;
+        @include: naglowek;
         margin-top: 5%;
         margin-bottom: 5%;
-        font-family: $font-family-lato;
-        font-weight: 300;
     }
 }
 
 #moje-umiejetnosci {
     p {
-        font-size: 18px;
-        color: $font-dark-color;
+        @include: opis;
         margin: 5% 5% 5% 5%;
-        font-family: $font-family-lato;
-        font-weight: 300;
     }
 }
 
@@ -154,17 +168,17 @@ li {
     }
 }
 
+
+/*portfolio*/
+
 #sekcja-portfolio {
     margin-bottom: 5%;
 }
 
 #moje-portfolio {
     h2 {
-        font-size: 30px;
-        color: $font-dark-color;
-        font-family: $font-family-lato;
-        font-weight: 300;
-        text-align: center;
+        @include: naglowek;
+        margin-top: 5%;
         margin-bottom: 5%;
     }
 }
@@ -283,14 +297,16 @@ li {
     }
 }
 
+
+/*kontakt*/
+
 #contact {
-    color: #fff;
-    background-color: $font-dark-color;
+    background-color: $dark-blue-background-color;
     padding: 5% 5% 5% 5%;
     font-family: $font-family-lato;
     font-weight: 300;
     text-align: left;
-    color: white;
+    color: $font-white-color:white;
 }
 
 #contact-info {
